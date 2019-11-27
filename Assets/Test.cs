@@ -8,13 +8,13 @@ public class Gundalf
 
     public void Magic()
     {
-        this.mp -= 5;
 
-        if (mp >=5)
+        if (mp > 5)
         {
-            Debug.Log("魔法攻撃をした。残りMPは"+ this.mp);
+            this.mp -= 5;
+            Debug.Log("魔法攻撃をした。残りMPは" + this.mp);
         }
-        else
+        else if(mp < 5)
         { 
             Debug.Log("MPが足りないため魔法が使えない。");
         }
@@ -45,7 +45,7 @@ public class Test : MonoBehaviour
 
         Gundalf firstmagic = new Gundalf();
 
-        for (int i = 0; i <= 9; i++)
+        for (int i = 0; i <= 10; i++)
         {
             firstmagic.Magic();
         }
