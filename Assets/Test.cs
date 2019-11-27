@@ -9,12 +9,12 @@ public class Gundalf
     public void Magic()
     {
 
-        if (mp > 5)
+        if (mp >= 5)
         {
             this.mp -= 5;
             Debug.Log("魔法攻撃をした。残りMPは" + this.mp);
         }
-        else if(mp < 5)
+        else if(mp <= 5)
         { 
             Debug.Log("MPが足りないため魔法が使えない。");
         }
